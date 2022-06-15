@@ -1,0 +1,68 @@
+<div class="card">
+  <div class="card-header">
+
+    <div class="row justify-content-between">
+      <div class="col-auto">
+        <h5>Lista de Usuarios</h5>
+      </div>
+      <div class="col-auto">
+        <button class="btn btn-success"
+          routerLink="/carteirinha/novo">
+          Novo Usuario
+        </button>
+      </div>
+    </div>
+
+  </div>
+  <div class="card-body">
+    <table class="table">
+      <tr>
+        <th>Nome</th>
+        <th>Email </th>
+        <th>Senha </th>
+
+
+
+
+        <th>Ações</th>
+      </tr>
+      <tr *ngFor="let usuario of usuarios; let i = index">
+
+        <td>{{ usuario.data.nome }}</td>
+        <td>{{ usuario.data.email }}</td>
+        <td>{{ usuario.data.senha }}</td>
+
+
+
+        <td>
+          <button
+            [routerLink]="[i]"
+            class="btn btn-primary mr-1">
+            Editar
+          </button>
+
+          <button
+            (click)="abrirModalExc(modalExc, i)"
+            class="btn btn-danger ml-1"
+          >
+            Excluír
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <ng-template #modalExc>
+    <div class="modal-header">Excluír produto</div>
+    <div class="modal-body">Tem certeza disso?</div>
+    <!--.modal-footer-->
+    <div class="modal-footer">
+      <button class="btn btn-secondary" (click)="fecharModalExc(false)">
+        Não
+      </button>
+      <button class="btn btn-primary" (click)="fecharModalExc(true)">
+        Sim
+      </button>
+    </div>
+  </ng-template>
+</div>

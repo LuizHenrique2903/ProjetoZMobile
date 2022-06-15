@@ -1,0 +1,36 @@
+
+<!--my-3-->
+<div class="row mb-3 mt-3 justify-content-center">
+  <div class="col-lg-4 col-sm-6 col-12">
+
+    <div class="card">
+      <div class="card-header pb-1">
+        <h5 *ngIf="indiceEdicao == -1">Adicionar Usuario</h5>
+        <h5 *ngIf="indiceEdicao != -1">Editar Usuario</h5>
+      </div>
+      <div class="card-body">
+        <label >Nome:</label>
+        <input [(ngModel)]="carteirinha.nome" class="form-control" />
+        <br />
+        <label>Email:</label>
+        <input [(ngModel)]="carteirinha.email" class="form-control" />
+        <br />
+        <label>Senha:</label>
+        <input [(ngModel)]="carteirinha.senha" class="form-control" />
+        <label>Salvar Imagem Frente</label>
+        <input (change)="enviarFrente($event)" type="file" id="frente" class="form-control">
+        <label>Salvar Imagem Verso</label>
+        <input (change)="enviarVerso($event)" type="file" id="verso" class="form-control">
+
+
+
+      </div>
+      <div class="card-footer">
+        <button (click)="salvar()" class="btn btn-success float-right">
+          Salvar
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,64 @@
+<ion-content class="swiper-no-swiping">
+    <div  class="containertop">
+        <img src="assets/logo.png" >
+    </div>
+        <div class="slide-inner ion-padding">
+          <span>Login</span>
+          <form [formGroup]="formLogin" (ngSubmit)="submitForm()">
+          <ion-item class="ion-margin-top" lines="none">
+            <ion-input type="email" placeholder="E-mail" formControlName="email">  </ion-input>
+          </ion-item>
+          <div *ngIf="formLogin.controls['email'].touched" >
+            <div *ngIf="formLogin.controls['email'].hasError('required')">
+              <span style="color: red;"> O E-mail é obrigatorio </span>
+            </div>
+            <div *ngIf="formLogin.controls['email'].hasError('email')">
+              <span style="color: red;"> Formato de e-mail invalido </span>
+            </div>
+          </div>
+
+
+
+
+          <ion-item class="ion-margin-top" lines="none">
+            <ion-input type="password" placeholder="Senha" formControlName="password" >  </ion-input>
+          </ion-item>
+          <div *ngIf="formLogin.controls['password'].touched" >
+            <div *ngIf="formLogin.controls['password'].hasError('required')">
+              <span style="color: red;"> senha é obrigatorio </span>
+            </div>
+            <div *ngIf="formLogin.controls['password'].hasError('minlength')">
+              <span style="color: red;"> Senha deve conter ao menos 6  </span>
+            </div>
+          </div>
+          <ion-button class="ion-margin-top" type="submit" color="light" expand="block">  Entrar </ion-button>
+        </form>
+
+
+
+    </div>
+
+
+
+
+
+
+
+  <div class="ocean">
+      <div class="waves">
+
+      </div>
+  </div>
+
+    <footer class="rodape">
+      <div class="pf">
+          <img src="assets/brasao.png">
+      </div>
+      <div class="uni">
+          <img src="assets/uni.jpg">
+      </div>
+    </footer>
+
+
+
+</ion-content>

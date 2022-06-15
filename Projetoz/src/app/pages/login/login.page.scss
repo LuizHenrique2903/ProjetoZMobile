@@ -1,0 +1,67 @@
+.containertop {
+  left: 0;
+  right: 0;
+  width: 60%;
+  margin: 0 auto;
+  top: 5px;
+  bottom: 30%;
+  z-index: 2;
+
+  span {
+    color: #fff;
+    left: 0%;
+    right: 0;
+    bottom: 200%;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+.slide-inner {
+  margin-top: 10%;
+  width: 90%;
+  margin-left: 5%;
+  color: #fff;
+  background-color: #00bbff;
+  border-radius: 10px;
+  z-index: 0;
+
+  ion-item {
+    --background: rgba(225, 225, 225, 0.2);
+    --border-radius: 10px;
+
+    ion-input {
+      --color: #fff;
+    }
+  }
+}
+
+.ocean {
+  margin-top: -10%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #00bfff;
+  border-radius: 3px;
+  height: 227px;
+  background-image: url("/assets/aut.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+
+}
+
+.uni{
+
+  float: right;
+  width: 25%;
+  margin-right: 10%;
+}
+
+.pf {
+  width: 25%;
+  float: left;
+  margin-left: 10%;
+}
+

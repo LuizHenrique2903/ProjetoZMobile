@@ -1,0 +1,13 @@
+<ion-button (click)="logout()">
+  Sair
+</ion-button>
+<ion-content>
+  <ion-slides pager="true" [options]="slideOpts" *ngFor="let carteirinha of lista_carteirinhas" >
+    <ion-slide *ngIf="carteirinha.data.email === user">
+      <img src="{{carteirinha.data.frenteURL}}" >
+    </ion-slide>
+    <ion-slide *ngIf="carteirinha.data.email === user">
+      <img src="{{carteirinha.data.versoURL}}">
+    </ion-slide>
+  </ion-slides>
+</ion-content>

@@ -1,0 +1,8 @@
+{
+  "name": "Projetoz",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}
